@@ -1,6 +1,7 @@
 
 
 <!DOCTYPE="utf-8">
+<html>
   <head>
     <title></title>
 
@@ -12,9 +13,7 @@
       results = result.results;
       for (var r of results) {
         var oneline = document.createElement('div');
-        oneline.innerHTML = r["collectionName"];
-		oneline.innerHTML += "<br>";
-		oneline.innerHTML += r["artistName"];
+        oneline.innerHTML = r["trackName"];
 		oneline.innerHTML += "<hr />";
 		output.appendChild(oneline);
       }
@@ -27,7 +26,7 @@
 <div id='status'></div>
 <div id='outputArea'></div>
 
-<script id=caller src='https://itunes.apple.com/search?term=手嶌&lang=ja_JP&callback=searchCallback'></script>
+<script id=caller src='https://itunes.apple.com/search?term=手嶌&country=JP&lang=ja_JP&callback=searchCallback'></script>
 
   </body>
 </html>
